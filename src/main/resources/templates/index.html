@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<script src="https://kit.fontawesome.com/17171b750a.js" crossorigin="anonymous"></script>
+<title>Gerenciamento de Alunos</title>
+</head>
+<body>
+
+	<div class="container">
+		
+		<div id="cabecalho" style="margin-bottom: 10px ">
+		<h1>Lista de Alunos</h1>
+		<a th:href="@{/novoAluno}"> <i class="fas fa-user-plus"> Adicionar	Aluno</i> </a>
+		</div>
+		
+		<div id="tabela">
+		<table border="1" class="tabela">
+			<thead>
+				<tr>
+					<th>Nome</th>
+					<th>Sobrenome</th>
+					<th>Email</th>
+					<th>Ações</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="aluno : ${listaDeAlunos}">
+					<td th:text="${aluno.nome}"></td>
+					<td th:text="${aluno.sobrenome}"></td>
+					<td th:text="${aluno.email}"></td>
+					<td>
+						<a th:href="@{/editarAluno/{id}(id=${aluno.id})}"> <i class="fas fa-edit">Editar</i> </a>
+						&nbsp;&nbsp;&nbsp;&nbsp;
+						<a th:href="@{/deletarAluno/{id}(id=${aluno.id})}"> <i class="fas fa-trash-alt">Deletar</i> </a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		</div>
+	</div>
+
+</body>
+</html>

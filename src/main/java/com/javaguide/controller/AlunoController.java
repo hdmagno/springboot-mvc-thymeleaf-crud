@@ -47,7 +47,6 @@ public class AlunoController {
 	public String deletarAluno(@PathVariable("id") long id) {
 		this.alunoService.deletarAluno(id);
 		return "redirect:/";
-
 	}
 
 }
