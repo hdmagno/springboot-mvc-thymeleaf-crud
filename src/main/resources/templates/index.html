@@ -3,19 +3,40 @@
 <head>
 <meta charset="UTF-8">
 <script src="https://kit.fontawesome.com/17171b750a.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="static/css/estilo.css">
+<style>
+
+.container {
+	width: 35%;
+	padding: 5px;
+}
+
+.tabela {
+	margin: 10px auto;
+}
+
+th, td {
+	border: 1px solid black;
+	padding: 5px;
+}
+
+.link {
+	text-decoration: none;
+	margin: 10px;
+}
+</style>
 <title>Gerenciamento de Alunos</title>
 </head>
 <body>
 
 	<div class="container">
 		
-		<div id="cabecalho" style="margin-bottom: 10px ">
 		<h1>Lista de Alunos</h1>
-		<a th:href="@{/novoAluno}"> <i class="fas fa-user-plus"> Adicionar	Aluno</i> </a>
-		</div>
 		
 		<div id="tabela">
-		<table border="1" class="tabela">
+		<fieldset>
+		<legend>Alunos</legend>
+		<table class="tabela">
 			<thead>
 				<tr>
 					<th>Nome</th>
@@ -37,6 +58,10 @@
 				</tr>
 			</tbody>
 		</table>
+		</fieldset>
+		<div class="link">
+		<a th:href="@{/novoAluno}"> <i class="fas fa-user-plus"> Adicionar Aluno</i> </a>
+		</div>
 		</div>
 	</div>
 
