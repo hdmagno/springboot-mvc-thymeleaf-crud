@@ -12,7 +12,7 @@
         <hr>
         <h2>Atualizar Aluno</h2>
 
-        <form action="#" th:action="@{/gravarAluno}" th:object="${aluno}" method="POST">
+        <form action="#" th:action="@{/atualizarAluno}" th:object="${aluno}" method="POST">
         	<input type="hidden" th:field="*{id}" />
         
             <input type="text" th:field="*{nome}" placeholder="Nome do Aluno" class="form-control mb-4 col-4">

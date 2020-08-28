@@ -13,5 +13,6 @@ public interface AlunoService {
 	Aluno buscarPorId(long id);
 	
 	void deletarAluno(long id);
-
+	
+	void atualizarAluno(Aluno aluno);
 }

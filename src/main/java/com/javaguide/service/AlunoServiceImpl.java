@@ -44,4 +44,14 @@ public class AlunoServiceImpl implements AlunoService {
 		
 	}
 
+	@Override
+	public void atualizarAluno(Aluno aluno) {
+		Aluno atualizar = new Aluno();
+		atualizar.setId(aluno.getId());
+		atualizar.setNome(aluno.getNome());
+		atualizar.setSobrenome(aluno.getSobrenome());
+		atualizar.setEmail(aluno.getEmail());
+		alunorepository.save(atualizar);
+	}
+
 }

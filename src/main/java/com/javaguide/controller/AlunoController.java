@@ -48,5 +48,11 @@ public class AlunoController {
 		this.alunoService.deletarAluno(id);
 		return "redirect:/";
 	}
+	
+	@PostMapping("/atualizarAluno")
+	public String atualizarAluno(@ModelAttribute("aluno") Aluno aluno) {
+		alunoService.atualizarAluno(aluno);
+		return "redirect:/";
+	}
 
 }
