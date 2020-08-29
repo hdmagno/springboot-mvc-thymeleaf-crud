@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <script src="https://kit.fontawesome.com/17171b750a.js"
 	crossorigin="anonymous"></script>
-<link rel="stylesheet" href="../static/css/estilo.css">
+<link rel="stylesheet" th:href="@{/css/estilo.css}">
 <style>
 
 .container {
@@ -37,11 +37,9 @@ input, button {
 			<form id="form" action="#" th:action="@{/gravarAluno}" th:object="${aluno}" method="POST">
 				<fieldset>
 					<legend>Cadastrar</legend>
-					<input type="text" th:field="*{nome}" placeholder="Nome do Aluno"
-						class="form-control mb-4 col-4"> 
+					<input type="text" th:field="*{nome}" placeholder="Nome do Aluno"> 
 					<input type="text" th:field="*{sobrenome}" placeholder="Sobrenome do Aluno"> 
 					<input type="email" th:field="*{email}" placeholder="Email do Aluno">
-
 					<button type="submit">
 						<i class="fas fa-save"> Gravar </i>
 					</button>

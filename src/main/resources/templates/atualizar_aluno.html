@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <script src="https://kit.fontawesome.com/17171b750a.js"
 	crossorigin="anonymous"></script>
-<link rel="stylesheet" href="static/css/estilo.css">
+<link rel="stylesheet" th:href="@{/css/estilo.css}">
 <style>
 .container {
 	width: 25%;
@@ -38,9 +38,9 @@ input, button {
 				<fieldset>
 					<legend>Atualizar</legend>
 					<input type="hidden" th:field="*{id}" /> 
-					<input type="text" th:field="*{nome}" placeholder="Nome do Aluno"> 
-					<input type="text" th:field="*{sobrenome}" placeholder="Sobrenome do Aluno"> 
-					<input type="email" th:field="*{email}" placeholder="Email do ALuno">
+					<input type="text" th:field="*{nome}"> 
+					<input type="text" th:field="*{sobrenome}"> 
+					<input type="email" th:field="*{email}">
 					<button type="submit">
 						<i class="fas fa-edit"> Atualizar </i>
 					</button>
